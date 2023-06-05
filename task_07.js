@@ -1,5 +1,4 @@
-function shorter_reverse_longer(a,b) {
-  
-    return b.length > a.length ? a + b.split('').reverse().join('') +a: b + a.split('').reverse().join('') +b
+function squareDigits(num){
+    return Number(('' + num).split('').map(function (val) { return val * val;}).join(''));
+    
   }
-  
