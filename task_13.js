@@ -157,4 +157,23 @@ const arr3 = [0, 1, 2, [[[3, 4]]]];
 // console.log(myEvery(arr2, st=>st>-1));
 
 
-
+const myFlat = (array, level = 1) => {
+    let result = []
+    for(let i = 0; i< array.length; i++){
+        if(level){
+            if(Array.isArray(array[i])) {
+                let secondResult = myFlat(array[i],level - 1)
+                    for( let j = 0; j < secondResult.length; j++  ) {
+                    result.push(secondResult[j])
+                }      
+            }
+            else {
+                result.push(array[i])
+            }
+        }
+        else {
+            result.push(array[i])
+        }
+    }
+    return result
+}
