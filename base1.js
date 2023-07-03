@@ -19,7 +19,7 @@ yourNumber = 6;
 console.log(yourNumber); // будет ошибка
 
 // По этой же логике константу нельзя создавать пустой.
-const age;
+let age;
 console.log(age); // будет ошибка
 let abc;
 console.log(abc); // значение будет undefined
